@@ -1,4 +1,4 @@
-import browserDebug from '../../../modules/browser/browser-debug'
+import browserDebug from '@flemist/browser-debug'
 
 const Command = require('@theintern/leadfoot/Command').default
 

@@ -1,5 +1,5 @@
 import {LogEntry} from '@theintern/leadfoot/index'
-import browserDebug from '../../../../modules/browser/browser-debug/index'
+import browserDebug from '@flemist/browser-debug'
 import {TLog, TLogPredicate} from './contracts'
 import {iter, resolveAll, run, runWithRootCommand} from './run'
 

@@ -70,6 +70,7 @@
 		"@babel/preset-env": "^7.11.5",
 		"@babel/register": "^7.11.5",
 		"@babel/runtime-corejs3": "^7.11.2",
+		"@flemist/browser-debug": "0.0.1",
 		"@flemist/css-to-xpath": "0.0.5",
 		"@flemist/run-script": "^0.2.5",
 		"@flemist/web-logger": "^0.1.2",

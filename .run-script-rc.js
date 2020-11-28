@@ -3,7 +3,7 @@ const { removeColor, createColorRegexp } = require('@flemist/run-script')
 
 const errorTextRegExp = /[^\r\n]*(\b[1-9]\d* *(fail|err)|[✗×]|fatal error|error occur)[^\r\n]*/i
 const errorColorRegExp = createColorRegexp([
-	colors.bold,
+	// colors.bold,
 	colors.red,
 	colors.magenta,
 	// colors.yellow,
