@@ -23,7 +23,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d52e1996-07d3-4492-b0b2-6fba29f4b076" name="Default Changelist" comment="" />
+    <list default="true" id="d52e1996-07d3-4492-b0b2-6fba29f4b076" name="Default Changelist" comment="Suppress experimental warnings">
+      <change afterPath="$PROJECT_DIR$/src/main/common/helpers/base64.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/helpers/diff3-merge.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/helpers/diff3/diff3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/helpers/diff3/onp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/helpers/pouchdb-helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/pouchdb/IndexDb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/pouchdb/PouchDbController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/pouchdb/contracts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/common/pouchdb/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tests/node/main/pouchdb/IndexDb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tests/node/main/pouchdb/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tests/node/main/pouchdb/src/contracts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tests/node/main/pouchdb/src/data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tests/node/main/pouchdb/src/generate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tests/node/main/pouchdb/src/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/tests/node/main/pouchdb/usage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/common/helpers/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/common/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/common/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/common/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/tests/common/main/helpers/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/tests/common/main/main.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,11 +70,12 @@
   </component>
   <component name="NamedScopeManager">
     <order>
+      <scope name="src+env" />
+      <scope name="src+env ts" />
       <scope name="src-test" />
       <scope name="src-main" />
       <scope name="all" />
       <scope name="env" />
-      <scope name="all-ts" />
     </order>
   </component>
   <component name="PackageJsonUpdateNotifier">
@@ -79,7 +102,7 @@
     <property name="js.buildTools.gulp.gulp_package_dir" value="$USER_HOME$/AppData/Roaming/npm/node_modules/gulp" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/common" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -104,7 +127,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="plint" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="ts.external.directory.path" value="L:\Work\_GIT\GitHub\NodeJs\templates\app-template\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="L:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -220,13 +243,7 @@
       <workItem from="1604762711020" duration="1324000" />
       <workItem from="1606039457815" duration="4394000" />
       <workItem from="1606458874653" duration="720000" />
-    </task>
-    <task id="LOCAL-00017" summary="Lint fixes">
-      <created>1590570787647</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1590570787647</updated>
+      <workItem from="1606563630103" duration="404000" />
     </task>
     <task id="LOCAL-00018" summary="Precommit OK.">
       <created>1590571665630</created>
@@ -564,7 +581,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606478293623</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Create module">
+      <created>1606563834801</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1606563834801</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +624,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Disabled windows travis tests. Rollback karma-edge-launcher" />
     <MESSAGE value="Fix scripts errors color" />
     <MESSAGE value="travis OK" />
     <MESSAGE value="Upgrade mocha 5.2.0 -&gt; 7.2.0" />
@@ -625,7 +648,8 @@
     <MESSAGE value="Small changes" />
     <MESSAGE value="Integrated @flemist/run-script module" />
     <MESSAGE value="Suppress experimental warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Suppress experimental warnings" />
+    <MESSAGE value="Create module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create module" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -649,10 +673,10 @@
       <screen x="0" y="0" width="1920" height="882" />
     </state>
     <state x="651" y="253" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.882@0.0.1920.882" timestamp="1601730650956" />
-    <state x="0" y="0" width="1919" height="882" key="CommitChangelistDialog2" timestamp="1606478292902">
+    <state x="0" y="0" width="1919" height="882" key="CommitChangelistDialog2" timestamp="1606563833522">
       <screen x="0" y="0" width="1920" height="882" />
     </state>
-    <state x="0" y="0" width="1919" height="882" key="CommitChangelistDialog2/0.0.1920.882@0.0.1920.882" timestamp="1606478292902" />
+    <state x="0" y="0" width="1919" height="882" key="CommitChangelistDialog2/0.0.1920.882@0.0.1920.882" timestamp="1606563833522" />
     <state width="1843" height="581" key="DebuggerActiveHint" timestamp="1601784278582">
       <screen x="0" y="0" width="1920" height="882" />
     </state>
@@ -737,10 +761,10 @@
       <screen x="0" y="0" width="1920" height="882" />
     </state>
     <state width="969" height="450" key="XDebugger.FullValuePopup/0.0.1920.882@0.0.1920.882" timestamp="1601716969584" />
-    <state x="0" y="0" width="1920" height="882" key="find.popup" timestamp="1606476360851">
+    <state x="0" y="0" width="1920" height="882" key="find.popup" timestamp="1606563715343">
       <screen x="0" y="0" width="1920" height="882" />
     </state>
-    <state x="0" y="0" width="1920" height="882" key="find.popup/0.0.1920.882@0.0.1920.882" timestamp="1606476360851" />
+    <state x="0" y="0" width="1920" height="882" key="find.popup/0.0.1920.882@0.0.1920.882" timestamp="1606563715343" />
     <state x="43" y="43" width="1793" height="805" key="scopes" timestamp="1606461475596">
       <screen x="0" y="0" width="1920" height="882" />
     </state>
