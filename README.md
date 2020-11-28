@@ -17,14 +17,14 @@ PouchDB helpers
 
 [CC0-1.0](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/pouchdb-helpers.svg
-[npm-url]: https://npmjs.org/package/pouchdb-helpers
-[node-version-image]: https://img.shields.io/node/v/pouchdb-helpers.svg
+[npm-image]: https://img.shields.io/npm/v/@flemist/pouchdb-helpers.svg
+[npm-url]: https://npmjs.org/package/@flemist/pouchdb-helpers
+[node-version-image]: https://img.shields.io/node/v/@flemist/pouchdb-helpers.svg
 [node-version-url]: https://nodejs.org/en/download/
-[travis-image]: https://travis-ci.org/NikolayMakhonin/pouchdb-helpers.svg?branch=browser-helpers
-[travis-url]: https://travis-ci.org/NikolayMakhonin/pouchdb-helpers?branch=browser-helpers
-[coveralls-image]: https://coveralls.io/repos/github/NikolayMakhonin/pouchdb-helpers/badge.svg?branch=browser-helpers
-[coveralls-url]: https://coveralls.io/github/NikolayMakhonin/pouchdb-helpers?branch=browser-helpers
-[downloads-image]: https://img.shields.io/npm/dm/pouchdb-helpers.svg
-[downloads-url]: https://npmjs.org/package/pouchdb-helpers
-[npm-url]: https://npmjs.org/package/pouchdb-helpers
+[travis-image]: https://travis-ci.org/NikolayMakhonin/@flemist/pouchdb-helpers.svg?branch=browser-helpers
+[travis-url]: https://travis-ci.org/NikolayMakhonin/@flemist/pouchdb-helpers?branch=browser-helpers
+[coveralls-image]: https://coveralls.io/repos/github/NikolayMakhonin/@flemist/pouchdb-helpers/badge.svg?branch=browser-helpers
+[coveralls-url]: https://coveralls.io/github/NikolayMakhonin/@flemist/pouchdb-helpers?branch=browser-helpers
+[downloads-image]: https://img.shields.io/npm/dm/@flemist/pouchdb-helpers.svg
+[downloads-url]: https://npmjs.org/package/@flemist/pouchdb-helpers
+[npm-url]: https://npmjs.org/package/@flemist/pouchdb-helpers

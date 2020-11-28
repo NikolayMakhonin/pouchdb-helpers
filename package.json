@@ -1,5 +1,5 @@
 {
-	"name": "pouchdb-helpers",
+	"name": "@flemist/pouchdb-helpers",
 	"version": "0.0.1",
 	"description": "PouchDB Helpers",
 	"author": {
