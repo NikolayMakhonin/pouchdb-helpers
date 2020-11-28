@@ -135,6 +135,7 @@
 		"postcss-nested": "4.2.1",
 		"postcss-syntax": "^0.36.2",
 		"postcss-url": "^8.0.0",
+		"pouchdb": "^7.2.2",
 		"ps-tree": "^1.2.0",
 		"rdtsc": "^2.0.0",
 		"regenerator-runtime": "^0.13.7",
