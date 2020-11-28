@@ -1,19 +1,19 @@
 {
-	"name": "app-template",
+	"name": "pouchdb-helpers",
 	"version": "0.0.1",
-	"description": "App Template",
+	"description": "PouchDB Helpers",
 	"author": {
-		"name": "App Template",
-		"url": "https://github.com/AppTemplate/",
-		"email": "app-template@mail.com"
+		"name": "Nikolay Makhonin",
+		"url": "https://github.com/NikolayMakhonin/",
+		"email": "pouchdb-helpers@mail.com"
 	},
-	"homepage": "https://github.com/AppTemplate/app-template/",
+	"homepage": "https://github.com/NikolayMakhonin/pouchdb-helpers/",
 	"bugs": {
-		"url": "https://github.com/AppTemplate/app-template/issues"
+		"url": "https://github.com/NikolayMakhonin/pouchdb-helpers/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com:AppTemplate/app-template.git"
+		"url": "git+ssh://git@github.com:NikolayMakhonin/pouchdb-helpers.git"
 	},
 	"license": "CC0-1.0",
 	"keywords": [],

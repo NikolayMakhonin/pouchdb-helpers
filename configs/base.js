@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 module.exports = {
-	packageName: 'app-template',
-	description: 'App Template',
+	packageName: 'pouchdb-helpers',
+	description: 'PouchDB Helpers',
 	tests      : {
 		intern: {
 
