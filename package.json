@@ -73,7 +73,7 @@
 		"@flemist/browser-debug": "0.0.1",
 		"@flemist/css-to-xpath": "0.0.5",
 		"@flemist/run-script": "^0.2.5",
-		"@flemist/web-logger": "^0.1.2",
+		"@flemist/web-logger": "^0.1.5",
 		"@metahub/karma-rollup-preprocessor": "^6.0.0",
 		"@rollup/plugin-alias": "^3.1.1",
 		"@rollup/plugin-babel": "^5.2.1",
