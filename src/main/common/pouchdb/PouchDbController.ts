@@ -75,7 +75,7 @@ export class PouchDbController {
 				})
 				return
 			} catch (ex) {
-				if (ex.type !== 'OpenError') {
+				if (ex.type !== 'OpenError' && ex.message.indexOf('database is closed') < 0) {
 					throw ex
 				}
 
