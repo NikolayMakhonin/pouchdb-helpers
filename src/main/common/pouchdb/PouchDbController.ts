@@ -96,7 +96,7 @@ export class PouchDbController {
 			await this.connect()
 			return await func.call(this, this)
 		} finally {
-			this.close()
+			await this.close()
 		}
 	}
 
