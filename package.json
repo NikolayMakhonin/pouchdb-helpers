@@ -1,6 +1,6 @@
 {
 	"name": "@flemist/pouchdb-helpers",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "PouchDB Helpers",
 	"author": {
 		"name": "Nikolay Makhonin",

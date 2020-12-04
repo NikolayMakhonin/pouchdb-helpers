@@ -38,6 +38,7 @@ export class IndexDb<TDoc, TSource> {
 	private readonly _sourceDb: PouchDbController
 	private readonly _indexDb: PouchDbController
 	private readonly _indexesOptions: Array<IIndexOptions<any, any>> = []
+	private readonly _dontSaveSource: boolean
 	private readonly _getSource: (doc: TDoc) => TSource
 	private readonly _getChangesOptions?: PouchDB.Core.ChangesOptions
 	private readonly _simulateError: boolean
@@ -45,17 +46,20 @@ export class IndexDb<TDoc, TSource> {
 	constructor({
 		name,
 		sourceDb,
+		dontSaveSource,
 		getSource,
 		options,
 		getChangesOptions,
 	}: {
 		name?: string,
 		sourceDb: PouchDbController,
+		dontSaveSource?: boolean, // prevDoc will always null
 		getSource: (doc: TDoc) => TSource,
 		options?: PouchDB.Configuration.DatabaseConfiguration,
 		getChangesOptions?: PouchDB.Core.ChangesOptions,
 	}) {
 		this._sourceDb = sourceDb
+		this._dontSaveSource = dontSaveSource
 		this._getSource = getSource
 		this._getChangesOptions = getChangesOptions
 		this._indexDb = new PouchDbController({
@@ -232,7 +236,8 @@ export class IndexDb<TDoc, TSource> {
 			for (let j = 0, len2 = this._indexesOptions.length; j < len2; j++) {
 				const indexOptions = this._indexesOptions[j]
 				let indexesIds = source && indexOptions.getIndexesIds(source)
-				let prevIndexesIds = prevSource && !(prevSource as any)._deleted && indexOptions.getIndexesIds(prevSource)
+				let prevIndexesIds = prevSource && !(prevSource as any)._deleted
+					&& indexOptions.getIndexesIds(prevSource)
 
 				const buffer = (indexesIds || prevIndexesIds) && {}
 
@@ -383,13 +388,19 @@ export class IndexDb<TDoc, TSource> {
 						&& indexesMap[indexId]
 					if (index && !index._deleted) {
 						const indexRollback = this.clone(index)
-						indexAction(null, prevSource, indexId, index, indexRollback, updateIndex(index, null, prevSource))
+						indexAction(
+							null, prevSource, indexId, index, indexRollback,
+							updateIndex(index, null, prevSource),
+						)
 					} else {
 						// console.warn(`Index ${JSON.stringify(indexId)} not found for doc: `, source)
 						const newIndex = Object.prototype.hasOwnProperty.call(changedIndexesMap, indexId)
 							&& changedIndexesMap[indexId]
 						if (newIndex) {
-							indexAction(null, prevSource, indexId, newIndex, null, updateIndex(newIndex, source, null))
+							indexAction(
+								null, prevSource, indexId, newIndex, null,
+								updateIndex(newIndex, source, null),
+							)
 						}
 					}
 				}
@@ -434,7 +445,8 @@ export class IndexDb<TDoc, TSource> {
 						indexAction(source, prevSource, indexId, index, indexRollback,
 							updateIndex(index, source, prevSource))
 					} else {
-						// console.warn(`Index ${JSON.stringify(indexId)} not found for doc and prevDoc: `, source, prevSource)
+						// console.warn(`Index ${JSON.stringify(indexId)} not found for doc and prevDoc: `,
+						// source, prevSource)
 						let newIndex = Object.prototype.hasOwnProperty.call(changedIndexesMap, indexId)
 							&& changedIndexesMap[indexId]
 						if (newIndex) {
@@ -478,6 +490,10 @@ export class IndexDb<TDoc, TSource> {
 		}
 
 		for (const sourceId in changedSourcesMap) {
+			if (!Object.prototype.hasOwnProperty.call(changedSourcesMap, sourceId)) {
+				continue
+			}
+
 			const source = changedSourcesMap[sourceId]
 			if (source !== void 0) {
 				const prevSource = prevSourcesMap[sourceId]
@@ -494,7 +510,15 @@ export class IndexDb<TDoc, TSource> {
 						rollbackItemsMap[source._id] = null
 						delete source._rev
 					}
+					if (this._dontSaveSource) {
+						deleteItems.push({
+							_id     : source._id,
+							_rev    : source._rev,
+							_deleted: true,
+						})
+					} else {
 					updateItems.push(source)
+					}
 				} else if (prevSource && !prevSource._deleted) {
 					prevSource._id = INDEX_SOURCE_PREFIX + prevSource._id
 					rollbackItemsMap[prevSource._id] = prevSource
